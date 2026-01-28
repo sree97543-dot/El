@@ -2,216 +2,751 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dr.Tai P.Pandian B.A.,B.L.,PGDFM.,PGDPT., ADVOCATE</title>
+
+  <title>Dr.Tai P.Pandian B.A.,B.L.,PGDFM.,PGDPT., ADVOCATE - MHC COMMISSIONER OF OATHS FOUNDER OF TAI ORGANIZATION</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0f1a40 0%, #183d8f 50%, #2a69ac 100%);
       margin: 0;
       min-height: 100vh;
       color: #e0e7ff;
+      overflow-x: hidden;
       padding: 20px 30px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
     }
+
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #3566c2cc, transparent 70%);
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+    }
+    body::before {
+      width: 320px;
+      height: 320px;
+      top: 20px;
+      left: 20px;
+      filter: blur(48px);
+    }
+    body::after {
+      width: 480px;
+      height: 480px;
+      bottom: 20px;
+      right: 20px;
+      filter: blur(55px);
+    }
+
     #announcement-text {
-      font-size: 3.2rem;
+      max-width: 700px;
       font-weight: 800;
+      font-size: 3.2rem;
+      color: #d0d9ff;
+      text-shadow: 0 0 14px #3580ffcc;
       text-align: center;
-      margin: 25px 0;
+      margin: 25px 0 20px;
+      user-select: none;
+      position: relative;
+      z-index: 5;
       font-family: 'Georgia', serif;
+      line-height: 1.2;
     }
+
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 720px;
+      width: 100%;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+      background: linear-gradient(135deg, #121952, #1e2a7a);
+      padding: 32px 32px 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(10, 20, 75, 0.7);
+      border: 1.5px solid #2d4daf;
+    }
+
+    .image-container {
+      max-width: 400px;
+      height: 400px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 30px #3366cccc);
+      border: 5px solid #4a6ed9;
+      border-radius: 18px;
+      overflow: hidden;
+      box-sizing: border-box;
+      text-align: center;
+      position: relative;
+      background: radial-gradient(circle at center, #4878dbbb 30%, transparent 85%);
+    }
+    .image-container::after {
+      content: "";
+      position: absolute;
+      top: -20px; left: -20px; right: -20px; bottom: -20px;
+      border-radius: 26px;
+      pointer-events: none;
+      background:
+        conic-gradient(from 0deg at 50% 50%, #4a6ed9cc 0 45deg, transparent 45deg 90deg);
+      animation: rotateHalo 10s linear infinite;
+      z-index: 0;
+      opacity: 0.6;
+    }
+    @keyframes rotateHalo {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+
+    img.enroll-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      transition: transform 0.4s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+      user-select: none;
+      display: block;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 20px #6a89d1aa inset;
+      background-color: #2f4a96;
+    }
+    img.enroll-img:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 100px #7199ffcc;
+      filter: drop-shadow(0 0 26px #7199ffcc);
+    }
+
+    #name-below-image {
+      font-weight: 900;
+      font-size: 3.6rem;
+      color: #dde6ff;
+      text-align: center;
+      user-select: none;
+      margin: 0;
+      max-width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+      word-wrap: break-word;
+      text-shadow: 3px 3px 15px #7791c9cc;
+      font-family: 'Georgia', serif;
+      letter-spacing: 0.02em;
+      background-color: #fff;
+      color: #000;
+      padding: 14px 20px;
+      border-radius: 12px;
+      width: fit-content;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
     main {
       max-width: 720px;
       width: 100%;
       background: linear-gradient(135deg, #1a2a6c, #27428a);
       border-radius: 26px;
-      padding: 48px 42px;
+      box-shadow: 0 18px 50px rgba(20, 49, 108, 0.75);
+      color: #bcd2ff;
+      padding: 48px 42px 58px;
+      margin-bottom: 60px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 20;
+      border: 1.8px solid #3a5dbf;
     }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #c9d9ff;
+      font-weight: 900;
+      font-size: 2.9rem;
+      letter-spacing: 1.6px;
+      text-shadow: 0 0 12px #7199ffcc;
+      font-family: 'Georgia', serif;
+    }
+
     #searchByContainer {
+      margin: 0 auto 38px;
+      max-width: 720px;
       display: flex;
-      gap: 36px;
       justify-content: center;
-      margin-bottom: 38px;
+      gap: 36px;
     }
-    #searchByContainer input {
+    #searchByContainer input[type="radio"] {
       display: none;
     }
+    /* White background, black text */
     #searchByContainer label {
-      background: #fff;
-      color: #000;
+      cursor: pointer;
       padding: 20px 50px;
       border-radius: 36px;
       font-weight: 900;
-      cursor: pointer;
+      font-size: 1.8rem;
+      font-family: 'Poppins', sans-serif;
+      user-select: none;
+      background: #fff;
+      color: #000;
+      border: 2px solid #4477dd;
+      box-shadow: none;
+      transition: background-color 0.35s, color 0.35s, box-shadow 0.35s;
+      flex: 1;
+      text-align: center;
     }
-    #searchByContainer input:checked + label {
+    /* Highlighted for selection: filled with blue and white text */
+    #searchByContainer input[type="radio"]:checked + label {
       background: #3b69db;
       color: #fff;
+      border-color: #2a4fad;
+      box-shadow: 0 0 12px #2a4fad;
+      font-weight: 900;
     }
-    #searchInput {
-      width: 100%;
-      padding: 22px 28px;
+    #searchByContainer label:hover:not(:checked) {
+      background: #e1ebff;
+      color: #214e91;
+      border-color: #214e91;
+      box-shadow: 0 0 15px #4a6ed988;
+    }
+
+    /* White background for input, black text */
+    main input#searchInput {
+      width: 460px;
+      max-width: 100%;
+      display: block;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
       border-radius: 18px;
       border: 2px solid #4477dd;
-      font-size: 1.5rem;
+      background: #fff;
+      color: #000;
+      padding: 22px 28px;
+      transition: border-color 0.35s ease, box-shadow 0.4s ease;
+      outline-offset: 3px;
+      outline-color: transparent;
+      user-select: text;
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      font-weight: 600;
+      box-shadow: none;
     }
+
+    main input#searchInput::placeholder {
+      color: #4477dd;
+      opacity: 0.8;
+    }
+
+    main input.enroll-number-mode {
+      width: 100% !important;
+      font-size: 1.8rem;
+      padding: 26px 32px;
+      box-shadow: none;
+      background: #fff;
+      border: 2px solid #4477dd;
+      color: #000;
+    }
+
     button.submit-btn {
-      margin-top: 40px;
-      width: 100%;
-      padding: 22px;
-      border-radius: 26px;
       background: #4b77dd;
-      color: #fff;
+      color: #e3f2ff;
       font-weight: 900;
-      border: none;
       cursor: pointer;
+      margin-top: 48px;
+      box-shadow: 0 0 58px #5a87ffcc;
+      border: 3.8px solid #153b90;
+      border-radius: 26px;
+      padding: 22px;
+      user-select: none;
+      font-size: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.35s, box-shadow 0.35s;
+      animation: crackButton 2.5s infinite;
+      z-index: 2;
+      width: 100%;
+      letter-spacing: 0.06em;
+      text-shadow: 0 0 6px #3a60b9;
+      user-select: none;
     }
+    button.submit-btn:hover {
+      background: #1766ff;
+      box-shadow: 0 0 72px #6495eddd, 0 0 80px #3a6bd9cc inset;
+      animation-play-state: paused;
+      outline: none;
+      color: #e0f0ff;
+    }
+    button.submit-btn:active {
+      box-shadow: inset 0 0 38px #3d5abbcc;
+      background: #0c3aa3;
+      transform: translateY(4px);
+      color: #a9c1ff;
+    }
+
+
     .result {
-      margin-top: 40px;
-      padding: 32px;
+      margin-top: 48px;
+      padding: 32px 40px;
       background: #365796;
       border-radius: 26px;
-      display: none;
+      box-shadow: inset 0 0 38px #2c4480cc;
+      font-size: 1.4rem;
+      color: #e0e9ff;
+      word-break: break-word;
       white-space: pre-line;
+      display: none;
+      user-select: text;
+      max-height: 360px;
+      overflow-y: auto;
+      position: relative;
+      z-index: 20;
+      font-weight: 600;
+    }
+
+    .input-container {
+      position: relative;
+      width: 100%;
+      z-index: 10;
+      max-width: 100%;
+      margin: 0 auto;
     }
     #suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
       background: #3356a8;
       border-radius: 18px;
-      margin-top: 10px;
-      display: none;
+      max-height: 260px;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(75, 120, 209, 0.7);
+      z-index: 40;
+      margin-top: 14px;
+      font-size: 1.25rem;
+      color: #d5dffd;
+      user-select: none;
+      border: 3px solid #5a7fdb;
     }
     #suggestions div {
-      padding: 14px 22px;
+      padding: 18px 28px;
+      border-bottom: 2px solid #4d6aac;
+      transition: background-color 0.35s ease, color 0.35s ease;
       cursor: pointer;
+      user-select: none;
     }
     #suggestions div:hover {
-      background: #5a7fdb;
+      background-color: #5a7fdb;
+      color: #e3f3ff;
+    }
+
+    .info-section {
+      margin-top: 58px;
+      font-size: 1.35rem;
+      color: #d0d9ff;
+      background: linear-gradient(135deg, #27468a, #4270ce 95%);
+      border-radius: 28px;
+      padding: 36px 44px;
+      box-shadow: inset 0 0 42px #3366d9cc;
+      line-height: 1.55;
+      user-select: text;
+      max-width: 720px;
+      position: relative;
+      z-index: 20;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      border: 2.5px solid #4074d8;
+    }
+
+    .info-section h3 {
+      margin-top: 0;
+      font-weight: 900;
+      color: #c5d7ff;
+      margin-bottom: 24px;
+      letter-spacing: 0.09em;
+      text-shadow: 0 0 7px #7799d8cc;
+      font-family: 'Georgia', serif;
+      font-size: 2.3rem;
+    }
+
+    .info-section p, .info-section a {
+      margin: 14px 0;
+      color: #d0d9ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .info-section a:hover, .info-section a:focus {
+      text-decoration: underline;
+      color: #a5bcff;
+      outline: none;
+    }
+
+    @keyframes crackButton {
+      0%,100% {
+        box-shadow: 0 0 28px #7199ffcc, 0 0 24px #81aaffcc inset;
+        color: #dbe8ff;
+        text-shadow: 0 0 16px #7199ffcc;
+      }
+      20% {
+        box-shadow: 2px 0 30px #4e7fdbcc, -2px 0 28px #60a3ffcc inset;
+        color: #a9cafd;
+        text-shadow: 0 0 20px #4e7fdbcc;
+      }
+      40% {
+        box-shadow: -3px 0 23px #5384d6cc, 3px 0 26px #73a8ffcc inset;
+        color: #c4daff;
+        text-shadow: 0 0 12px #73a8ffcc;
+      }
+      60% {
+        box-shadow: 3px 0 34px #5e8bdacc, -3px 0 30px #7dacffcc inset;
+        color: #adc3ff;
+        text-shadow: 0 0 22px #5e8bdacc;
+      }
+      80% {
+        box-shadow: -2px 0 27px #4074d8cc, 2px 0 29px #519effcc inset;
+        color: #bedcff;
+        text-shadow: 0 0 14px #519effcc;
+      }
+    }
+
+    @media (max-width: 920px) {
+      #announcement-text {
+        max-width: 95vw;
+        font-size: 2.6rem;
+        margin: 18px 10px 18px;
+      }
+      .header-container {
+        max-width: 95vw;
+        padding: 28px 24px 24px;
+      }
+      .image-container {
+        max-width: 90vw;
+        height: auto;
+      }
+      img.enroll-img {
+        height: auto;
+      }
+      #name-below-image {
+        font-size: 2.8rem;
+        padding: 10px 14px;
+      }
+      main {
+        max-width: 90vw;
+        margin: 20px auto 50px;
+        padding: 32px 24px 45px;
+        border-radius: 24px;
+      }
+      #searchByContainer {
+        gap: 22px;
+      }
+      #searchByContainer label {
+        font-size: 1.5rem;
+        padding: 18px 28px;
+      }
+      main input#searchInput {
+        width: 100% !important;
+        font-size: 1.4rem;
+        padding: 20px 24px;
+      }
+      button.submit-btn {
+        font-size: 1.2rem;
+        padding: 18px;
+      }
+      .result {
+        font-size: 1.2rem;
+        max-height: 260px;
+        padding: 22px 26px;
+      }
+      .info-section {
+        max-width: 95vw;
+        font-size: 1.1rem;
+        padding: 24px 20px;
+      }
+      .info-section h3 {
+        font-size: 1.95rem;
+        margin-bottom: 18px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<div id="announcement-text">
-  Tamil Nadu & Puducherry Bar Council<br>Election - 2026
-</div>
+  <div id="announcement-text">Tamil Nadu & Puducherry Bar Council<br>Election - 2026</div>
 
-<main>
-  <h2 style="text-align:center;">Check Enrollment Details</h2>
+  <div class="header-container" role="banner">
+    <div class="image-container" aria-label="Portrait of Dr. Tai Pandian">
+      <img src="https://uploads.onecompiler.io/44brf7zdy/44brf9pbk/Screenshot%202026-01-26%20204514crop.png" alt="Portrait of Dr. Tai Pandian" class="enroll-img" />
+    </div>
 
-  <div id="searchByContainer">
-    <input type="radio" id="optionEnrollment" name="searchBy" value="EnrollmentNo" checked>
-    <label for="optionEnrollment">Enrollment Number</label>
-
-    <input type="radio" id="optionName" name="searchBy" value="Name">
-    <label for="optionName">Name</label>
+    <div id="name-below-image">Dr. Tai P. Pandian</div>
   </div>
 
-  <input id="searchInput"
-         placeholder="Enter Enrollment Number (e.g. 653/1994)"
-         oninput="handleInputChange()" />
+  <main role="main" aria-labelledby="searchHeading">
+    <h2 id="searchHeading">Check Enrollment Details</h2>
 
-  <div id="suggestions"></div>
+    <div id="searchByContainer" role="radiogroup" aria-label="Search by options">
+      <input type="radio" id="optionEnrollment" name="searchBy" value="EnrollmentNo" checked aria-checked="true" />
+      <label for="optionEnrollment" tabindex="0" role="radio" aria-checked="true">Enrollment Number</label>
 
-  <button class="submit-btn" onclick="showDetails()">Submit</button>
+      <input type="radio" id="optionName" name="searchBy" value="Name" aria-checked="false" />
+      <label for="optionName" tabindex="0" role="radio" aria-checked="false">Name</label>
+    </div>
 
-  <div id="result" class="result"></div>
-</main>
+    <div class="input-container">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Enter Enrollment Number (e.g. 653/1994)" 
+        autocomplete="off" 
+        oninput="handleInputChange()" 
+        aria-autocomplete="list" 
+        aria-haspopup="listbox"
+        aria-controls="suggestions"
+        aria-expanded="false"
+        aria-activedescendant=""
+      />
+      <div id="suggestions" role="listbox" style="display:none;"></div>
+    </div>
 
-<script>
-let data = [];
+    <button onclick="showDetails()" aria-label="Submit Search" type="button" class="submit-btn">Submit</button>
 
-/* ================= LOAD CSV ================= */
-async function loadData() {
-  try {
-    const response = await fetch('data.csv', { cache: 'no-store' });
-    if (!response.ok) throw new Error('CSV not found');
+    <section class="result" id="result" role="region" aria-live="polite" tabindex="0"></section>
 
-    const text = await response.text();
-    data = parseCSV(text);
-    console.log('✅ CSV loaded:', data.length);
-  } catch (err) {
-    console.error(err);
-    const r = document.getElementById('result');
-    r.style.display = 'block';
-    r.textContent = '⚠️ Unable to load CSV file.';
-  }
-}
+    <section class="info-section" aria-label="About Dr. Tai Pandian">
+      <h3>About</h3>
+      <p>Welcome to the official channel of Adv. TAI Pandian ⚖️<br>
+      I am an Advocate at the Madras High Court, Chennai, specializing in Civil, Family & Commercial Law.</p>
+      <p>💡 My mission is to make law simple and accessible for everyone. Through this channel, I share legal awareness in Tamil & English, helping people understand their rights, duties, and remedies in everyday life.</p>
+      <p>🔹 Content you’ll find here:<br>
+      ✔️ Laws explained in Simple Tamil<br>
+      ✔️ Family Law, Property & Rent Disputes<br>
+      ✔️ Cheque Bounce & Consumer Rights<br>
+      ✔️ Legal Tips & Court Procedures<br>
+      ✔️ Women’s Rights & Social Awareness (via TAI Organisation – NGO)</p>
+      <p>✨ “Better Legal Awareness, Better Society.”</p>
+      <p>👉 Subscribe to learn your rights, stay empowered, and build a society where law works for everyone.</p>
+    </section>
 
-/* ================= PARSE CSV ================= */
-function parseCSV(text) {
-  const lines = text.trim().split(/\r?\n/);
-  const headers = lines[0].split(',').map(h => h.trim());
+    <section class="info-section" aria-label="Contact Information">
+      <h3>Contact</h3>
+      <p>📩 Email: <a href="mailto:tai.advocatepandian@gmail.com">tai.advocatepandian@gmail.com</a></p>
+      <p><a href="https://linkedin.com/in/tai-pandian-482538380" target="_blank" rel="noopener noreferrer">LinkedIn: linkedin.com/in/tai-pandian-482538380</a></p>
+      <p><a href="https://x.com/adv_taipandian" target="_blank" rel="noopener noreferrer">Twitter: x.com/adv_taipandian</a></p>
+    </section>
+  </main>
 
-  return lines.slice(1).map(line => {
-    const values = line.split(',').map(v => v.trim());
-    let obj = {};
-    headers.forEach((h, i) => obj[h] = values[i] || '');
-    return obj;
-  });
-}
+  <script>
+    let data = [];
 
-/* ================= INPUT HANDLING ================= */
-function handleInputChange() {
-  const searchBy = document.querySelector('input[name="searchBy"]:checked').value;
-  const query = searchInput.value.toLowerCase().trim();
-  if (searchBy !== 'Name' || !query) {
-    suggestions.style.display = 'none';
-    return;
-  }
+    // Load data from backend API
+    async function loadData() {
+      try {
+        // Use relative URL so it works on any host
+        const response = await fetch('/api/data');
+        if (!response.ok) throw new Error('Failed to fetch data from backend');
+        data = await response.json();
+        console.log(`✅ Data loaded: ${data.length} records`);
+      } catch (err) {
+        console.error('Error loading data:', err);
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.textContent = '⚠️ Error connecting to server. Make sure the backend server is running.';
+      }
+    }
 
-  const matches = data.filter(d => d.Name.toLowerCase().includes(query)).slice(0, 10);
-  if (!matches.length) {
-    suggestions.style.display = 'none';
-    return;
-  }
+    function updateRadiosAccessibility(selectedValue) {
+      const radios = document.querySelectorAll('#searchByContainer input[type="radio"]');
+      radios.forEach(radio => {
+        const label = document.querySelector(`label[for="${radio.id}"]`);
+        if (radio.value === selectedValue) {
+          radio.setAttribute('aria-checked', 'true');
+          label.setAttribute('aria-checked', 'true');
+          label.tabIndex = 0;
+        } else {
+          radio.setAttribute('aria-checked', 'false');
+          label.setAttribute('aria-checked', 'false');
+          label.tabIndex = -1;
+        }
+      });
+    }
 
-  suggestions.innerHTML = '';
-  matches.forEach(m => {
-    const div = document.createElement('div');
-    div.textContent = `${m.Name} — ${m.EnrollmentNo}`;
-    div.onclick = () => {
-      searchInput.value = m.Name;
-      suggestions.style.display = 'none';
-      showDetails();
-    };
-    suggestions.appendChild(div);
-  });
-  suggestions.style.display = 'block';
-}
+    document.getElementById('searchByContainer').addEventListener('click', e => {
+      if (e.target.tagName === 'LABEL') {
+        const val = document.getElementById(e.target.htmlFor).value;
+        changeSearchMode(val);
+      }
+    });
 
-/* ================= SEARCH ================= */
-function showDetails() {
-  const searchBy = document.querySelector('input[name="searchBy"]:checked').value;
-  const val = searchInput.value.trim().toLowerCase();
-  const r = document.getElementById('result');
+    document.getElementById('searchByContainer').addEventListener('keydown', e => {
+      if (e.target.tagName === 'LABEL') {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const val = document.getElementById(e.target.htmlFor).value;
+          changeSearchMode(val);
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          let next = e.target.nextElementSibling || e.target.parentElement.firstElementChild;
+          next.focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          let prev = e.target.previousElementSibling || e.target.parentElement.lastElementChild;
+          prev.focus();
+        }
+      }
+    });
 
-  const record = data.find(d => d[searchBy]?.toLowerCase() === val);
+    function changeSearchMode(selectedValue = null) {
+      const radios = document.querySelectorAll('#searchByContainer input[type="radio"]');
+      const input = document.getElementById('searchInput');
+      if (selectedValue) {
+        radios.forEach(radio => {
+          radio.checked = (radio.value === selectedValue);
+        });
+      } else {
+        selectedValue = [...radios].find(r => r.checked).value;
+      }
 
-  if (!record) {
-    r.style.display = 'block';
-    r.textContent = '❌ No matching record found.';
-    return;
-  }
+      input.value = '';
+      input.setAttribute('aria-activedescendant', '');
+      hideSuggestions();
 
-  r.style.display = 'block';
-  r.innerHTML = `
-<strong>Enrollment No:</strong> ${record.EnrollmentNo}
-<strong>Name:</strong> ${record.Name}
-<strong>Gender:</strong> ${record.Gender}
-<strong>Father's Name:</strong> ${record.FatherName}
-<strong>Bar Association:</strong> ${record.BarAssociation}
-<strong>Location:</strong> ${record.Location}
-  `;
-}
+      input.placeholder = selectedValue === 'EnrollmentNo' ?
+        'Enter Enrollment Number (e.g. 653/1994)' :
+        'Enter Name (e.g. A. ALBERT JAMES)';
+      input.setAttribute('aria-expanded', 'false');
 
-/* ================= INIT ================= */
-document.addEventListener('DOMContentLoaded', loadData);
-</script>
+      const resultDiv = document.getElementById('result');
+      resultDiv.style.display = 'none';
+      resultDiv.textContent = '';
+
+      if (selectedValue === 'EnrollmentNo') {
+        input.classList.add('enroll-number-mode');
+      } else {
+        input.classList.remove('enroll-number-mode');
+      }
+
+      updateRadiosAccessibility(selectedValue);
+      input.focus();
+    }
+
+    function handleInputChange() {
+      const radios = document.querySelectorAll('#searchByContainer input[type="radio"]');
+      const searchBy = [...radios].find(r => r.checked).value;
+      const input = document.getElementById('searchInput');
+      const query = input.value.trim().toLowerCase();
+      if (!query || searchBy === 'EnrollmentNo') {
+        hideSuggestions();
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      const matches = data.filter(d => d.Name.toLowerCase().includes(query));
+
+      if (matches.length === 0) {
+        hideSuggestions();
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+
+      const suggestionsDiv = document.getElementById('suggestions');
+      suggestionsDiv.innerHTML = '';
+      matches.slice(0, 10).forEach((match, i) => {
+        const div = document.createElement('div');
+        div.id = `suggestion-${i}`;
+        div.role = "option";
+        div.tabIndex = -1;
+        div.textContent = `${match.Name} — ${match.EnrollmentNo}`;
+        div.onclick = function () {
+          input.value = match.Name;
+          hideSuggestions();
+          showDetails();
+        };
+        div.onkeydown = function(e) {
+          if(e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            this.click();
+          }
+        };
+        suggestionsDiv.appendChild(div);
+      });
+      suggestionsDiv.style.display = 'block';
+      input.setAttribute('aria-expanded', 'true');
+    }
+
+    function hideSuggestions() {
+      const suggestionsDiv = document.getElementById('suggestions');
+      suggestionsDiv.style.display = 'none';
+      suggestionsDiv.innerHTML = '';
+    }
+
+    document.addEventListener('click', (event) => {
+      const suggestionsDiv = document.getElementById('suggestions');
+      const input = document.getElementById('searchInput');
+      if (!suggestionsDiv.contains(event.target) && event.target !== input) {
+        hideSuggestions();
+        input.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    function showDetails() {
+      hideSuggestions();
+
+      const radios = document.querySelectorAll('#searchByContainer input[type="radio"]');
+      const searchBy = [...radios].find(r => r.checked).value;
+      const inputVal = document.getElementById('searchInput').value.trim();
+      const resultDiv = document.getElementById('result');
+
+      if (!inputVal) {
+        resultDiv.style.display = 'block';
+        resultDiv.textContent = 'Please enter a value to search.';
+        return;
+      }
+
+      let record;
+      if (searchBy === 'EnrollmentNo') {
+        record = data.find(
+          d => d.EnrollmentNo.toLowerCase() === inputVal.toLowerCase()
+        );
+      } else if (searchBy === 'Name') {
+        record = data.find(
+          d => d.Name.toLowerCase() === inputVal.toLowerCase()
+        );
+      }
+
+      if (record) {
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `
+          <strong>Enrollment No:</strong> ${record.EnrollmentNo}<br>
+          <strong>Name:</strong> ${record.Name}<br>
+          <strong>Gender:</strong> ${record.Gender}<br>
+          <strong>Father's Name:</strong> ${record.FatherName}<br>
+          <strong>Bar Association:</strong> ${record.BarAssociation}<br>
+          <strong>Location:</strong> ${record.Location}
+        `;
+        resultDiv.focus();
+      } else {
+        resultDiv.style.display = 'block';
+        resultDiv.textContent = '❌ No matching record found.';
+        resultDiv.focus();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      changeSearchMode('EnrollmentNo');
+      loadData();
+    });
+  </script>
 
 </body>
 </html>
