@@ -1,23 +1,34 @@
-const express = require('express');
-const fs = require('fs');
-const cors = require('cors');
-const app = express();
-app.use(cors());
+<script>
+let data = [];
 
-app.get('/api/data', (req, res) => {
-  fs.readFile('data.csv', 'utf8', (err, csvText) => {
-    if(err) return res.status(500).send('Error reading CSV');
+// Load CSV file dynamically (client-side)
+async function loadData() {
+  try {
+    const response = await fetch('data.csv'); // CSV is in same folder
+    if (!response.ok) throw new Error('Cannot fetch CSV file');
+
+    const csvText = await response.text();
     const rows = csvText.trim().split('\n');
     const headers = rows.shift().split(',');
-    const data = rows.map(row => {
+
+    data = rows.map(row => {
       const values = row.split(',');
       let obj = {};
-      headers.forEach((h,i) => obj[h.trim()] = values[i].trim());
+      headers.forEach((h, i) => obj[h.trim()] = values[i].trim());
       return obj;
     });
-    res.json(data);
-  });
-});
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    console.log(`✅ CSV loaded: ${data.length} records`);
+  } catch (err) {
+    console.error('Error loading CSV:', err);
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.textContent = '⚠️ Could not load data. Make sure data.csv is in the same folder as index.html';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  changeSearchMode('EnrollmentNo');
+  loadData();
+});
+</script>
